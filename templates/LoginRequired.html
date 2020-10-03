@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}
+Access Denied
+{% endblock %}
+{% block content %}
+<div class="card" style="width: 70%;display:flex;margin:auto;margin-top:2%;background-color: rgb(245, 245, 229);border-width:10px">
+    <h3>Login requied</h3><hr>
+    <a href="{% url 'home' %}">Login</a>
+</div>
+{% endblock %}

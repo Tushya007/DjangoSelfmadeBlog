@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+All Blog Posts
+{% endblock %}
+{% block content %}
+{% for obj in objects %}
+<div class="card" style="width: 70%;display:flex;margin:auto;margin-top:2%;background-color: rgb(245, 245, 229);border-width:10px">
+    <div class="card-body">
+        <div class="row mb-0 pb-0"><h5 class="ml-2 mr-auto">{{ obj.user }}</h5><h6 class="mr-2">{{ obj.date_time_posted }}</h6></div><hr>
+        <h3 class="card-title">{{ obj.title }}</h3>
+        <p class="card-text">{{ obj.content }}</p>
+    </div>
+</div>
+{% endfor %}
+<div style="padding-bottom: 100px;"></div>
+{% endblock %}

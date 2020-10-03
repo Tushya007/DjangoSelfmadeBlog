@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Create Blog Post
+{% endblock %}
+{% block content %}
+<div class="card" style="width: 70%;display:flex;margin:auto;margin-top:2%;background-color: rgb(245, 245, 229);border-width:10px">
+    <h2 class="pt-3 m-auto">Create Blog Post</h2><hr>
+    <form method="post" class="p-3 col-12">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-success">Create post</button>
+    </form>
+</div>
+{% endblock content %}

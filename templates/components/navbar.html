@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(105, 116, 146);">
+    <a class="navbar-brand mr-auto" href="{% url 'home' %}"><h4>MyBlog</h4></a>
+    {% if not logIn %}
+    <a class="navbar-brand" href="{% url 'create_user' %}">Signup</a>
+    <a class="navbar-brand" href="{% url 'login' %}">Login</a>
+    {% elif logIn %}
+    <a class="navbar-brand" href="{% url 'create_blog' %}">Create Post</a>
+    <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+    {% endif %}
+</nav>
